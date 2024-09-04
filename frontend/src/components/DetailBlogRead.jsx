@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSpeechSynthesis } from 'react-speech-kit';
 
 export const DetailBlogRead = () => {
     const [data, setData] = useState(null); 
@@ -24,12 +23,6 @@ export const DetailBlogRead = () => {
     useEffect(() => {
         getDetailedData();
     }, [id]);
-
-    const playContent = () => {
-        if (data && data.content) {
-            speak({ text: data.content });
-        }
-    };
 
     if (loading) {
         return <div className="text-center">Loading...</div>;
