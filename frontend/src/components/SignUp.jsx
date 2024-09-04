@@ -26,7 +26,7 @@ export const SignUp = () => {
       return;
     }
     try {
-      await axios.post("http://localhost:3000/user/signup", {
+      await axios.post("https://blog-shpere-three.vercel.app/user/signup", {
         username,
         email,
         password

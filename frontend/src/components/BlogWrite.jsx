@@ -31,7 +31,7 @@ export const BlogWrite = () => {
         }
         try {
             const data = { title, content, imageUrl, category, username };
-            await axios.post("http://localhost:3000/blogs/write", data, {
+            await axios.post("https://blog-shpere-three.vercel.app/blogs/write", data, {
                 headers: {
                     "Content-Type": "application/json"
                 }

@@ -9,7 +9,7 @@ export const BlogRead = () => {
 
     const getData = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/blogs/read");
+            const response = await axios.get("https://blog-shpere-three.vercel.app/blogs/read");
             setData(response.data);
             console.log(response.data);
         } catch (error) {

@@ -12,7 +12,7 @@ export const DetailBlogRead = () => {
 
     const getDetailedData = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/blogs/read/${id}`);
+            const response = await axios.get(`https://blog-shpere-three.vercel.app/read/${id}`);
             setData(response.data);
         } catch (err) {
             setError('An error occurred while fetching the data.');
