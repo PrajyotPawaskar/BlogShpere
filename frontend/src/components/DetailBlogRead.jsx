@@ -7,7 +7,6 @@ export const DetailBlogRead = () => {
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState(null); 
     const { id } = useParams();
-    const { speak } = useSpeechSynthesis(); 
 
     const getDetailedData = async () => {
         try {
@@ -51,12 +50,6 @@ export const DetailBlogRead = () => {
                             className="w-full h-auto max-w-full rounded-lg border border-gray-300 shadow-md"
                         />
                     </div>
-                    <button
-                        onClick={playContent}
-                        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition"
-                    >
-                        Read Aloud
-                    </button>
                     <div className="mt-8">
                         {data.content}
                     </div>
